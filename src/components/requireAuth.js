@@ -27,3 +27,4 @@ export default function(ComposedComponent) {
 
     return connect(mapStateToProps)(Authentication)
 }
+
