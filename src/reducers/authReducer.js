@@ -1,6 +1,4 @@
-import {
-    AUTHENTICATE_USER
-} from '../actions/types';
+import { AUTHENTICATE_USER } from './../actions/types';
 
 const INITIAL_STATE = {
     authenticated: false,
@@ -10,10 +8,11 @@ const INITIAL_STATE = {
 export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
         case AUTHENTICATE_USER:
-            console.log(action.payload);
+            const { user } = action.payload;
             return {
                 ...state,
-                user: action.payload.user
+                authenticated: true,
+                user
             }
         default: return state;
     }
