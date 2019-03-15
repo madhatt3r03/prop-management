@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
-import Signinform from '../auth/signinForm';
-
+import NewNewsletterForm from './newsletterNewForm';
 class NewNewsletter extends Component {
 
     onSubmit = (fields) => {
@@ -12,7 +11,7 @@ class NewNewsletter extends Component {
     render () {
         return (
             <div className='new-newsletter'>
-                <Signinform onSubmit={(event) => this.onSubmit(event)}/>
+                <NewNewsletterForm onSubmit={(event) => this.onSubmit(event)}/>
             </div>
         )
     }
