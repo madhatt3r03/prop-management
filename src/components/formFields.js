@@ -58,5 +58,22 @@ import React, { Component } from 'react';
         }
     }
 
+    export class FormImage extends Component {
+        render() {
+            const { className, title, input, type, imageUrl } = this.props;
+            return (
+                <div className={`${className} form-image`}>
+                    <label className='form-image__title'>{title}</label>
+                    <input 
+                        className='form-image__image'
+                        type={type}
+                        {...input}
+                        src={imageUrl}
+                    />
+                </div>
+            )
+        }
+    }
+
     
 
