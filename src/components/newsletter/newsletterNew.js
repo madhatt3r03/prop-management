@@ -12,6 +12,7 @@ class NewNewsletter extends Component {
         // this.props.history.push('/dashboard')
         console.log('trying to submit');
     }
+    
     onCancel = () => {
         console.log('trying to cancel');
     }
