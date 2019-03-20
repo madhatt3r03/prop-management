@@ -59,12 +59,20 @@ import React, { Component } from 'react';
     }
 
     export class FormImage extends Component {
+
+        handleSelectedImage = (event) => {
+            var image = document.getElementById('newsletter-new-image');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        }    
+
+        
         render() {
             const { className, title, input, type, imageUrl } = this.props;
             return (
                 <div className={`${className} form-image`}>
                     <label className='form-image__title'>{title}</label>
-                    <input 
+                    <img 
+                        id='newsletter-new-image'
                         className='form-image__image'
                         src={imageUrl}
                     />
@@ -84,6 +92,8 @@ import React, { Component } from 'react';
                     name='file'
                     accepts='image/*'
                     value={undefined}
+                    onChange={this.handleSelectedImage}
+
                     
                         />
                 </div>
