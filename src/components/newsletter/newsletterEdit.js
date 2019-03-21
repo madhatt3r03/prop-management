@@ -16,6 +16,11 @@ class EditNewsletter extends Component {
         this.props.history.push('/dashboard')
     }
 
+    componentDidMount() {
+        // this.props.fetchNewsletterWithId
+        console.log(this.props.match.params.id);
+    }
+
 
     render() {
         return ( 
