@@ -19,7 +19,7 @@ class NewsletterGrid extends Component {
     componentDidMount() {
         setTimeout(() => {
             this.props.fetchNewsletters();
-        }, 3000);
+        }, 1000);
     }
 
     render() {
