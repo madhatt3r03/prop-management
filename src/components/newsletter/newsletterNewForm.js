@@ -8,11 +8,14 @@ import TextLink from '../textLink';
 class NewNewsletterForm extends Component {
     render() {
 
-        const { handleSubmit, title } = this.props;
+        const { handleSubmit, formTitle, newsletterToEdit } = this.props;
+        
+        const { title, body, imageUrl } = newsletterToEdit;
+        console.log(title, body, imageUrl);
 
         return (
             <form onSubmit={ handleSubmit} className='new-newsletter-form'>
-                <FormTitle className='new-newsletter-form__title' text='New Newsletter' text={title}/>
+                <FormTitle className='new-newsletter-form__title' text='New Newsletter' text={formTitle}/>
                 <Field 
                     className="new-newsletter-form__newsletter-title" 
                     placeholder="Service Request Title Here"  
